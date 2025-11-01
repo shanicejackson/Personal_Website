@@ -1,0 +1,152 @@
+/* Contact Page */
+.contact-page {
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-page h1 {
+  font-size: 2.5rem;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.contact-intro {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+/* Contact Form Container */
+.contact-form-container {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+/* Title */
+.contact-form-container h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.contact-form-container h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(135deg, pink, pink);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Form Inputs */
+form input,
+form textarea {
+  width: 100%;
+  padding: 15px 20px;
+  margin: 12px 0;
+  border: 2px solid #f0f0f0;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 15px;
+  outline: none;
+  color: #333;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+/* Input Placeholder */
+form input::placeholder,
+form textarea::placeholder {
+  color: #b4b0ce;
+}
+
+/* Input Hover/Focus */
+form input:focus,
+form textarea:focus {
+  border-color: #9b8bff;
+  box-shadow: 0 0 10px rgba(155, 139, 255, 0.1);
+}
+
+/* Textarea */
+form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+/* Submit Button */
+form button {
+  background: linear-gradient(135deg, pink, pink);
+  color: white;
+  border: none;
+  padding: 16px 50px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  width: 100%;
+}
+
+form button:hover:not(:disabled) {
+  background: linear-gradient(135deg, palevioletred, palevioletred);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(123, 108, 255, 0.2);
+}
+
+form button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Status Messages */
+.status-message {
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  animation: fadeIn 0.3s ease;
+}
+
+.status-message.success {
+  background-color: #e7f5ef;
+  color: #0d6832;
+  border: 1px solid #b7e4d0;
+}
+
+.status-message.error {
+  background-color: #fdf2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+}
+
+.status-message.loading {
+  background-color: #f3f4f6;
+  color: #4b5563;
+  border: 1px solid #e5e7eb;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

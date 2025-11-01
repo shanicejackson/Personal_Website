@@ -1,0 +1,82 @@
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: palevioletred;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* ensure page content is not hidden behind the fixed navbar */
+:root{--navbar-height:70px}
+body{
+  padding-top: var(--navbar-height);
+}
+
+#links{
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.brand{
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  margin-right: 16px;
+  text-decoration: none;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.nav-left{
+  display: flex;
+  align-items: center;
+}
+
+.nav-link{
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+  font-family: 'Lucida Handwriting', cursive;
+  text-decoration: none;
+  padding: 8px 10px;
+}
+
+.nav-link:hover{opacity:0.9}
+
+.nav-right{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.site-search{
+  padding: 6px 10px;
+  font-size: 14px;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
+
+.search-button{
+  padding: 6px 12px;
+  font-size: 14px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-button:hover{background-color: pink}
+
+@media (max-width: 700px){
+  .nav-left #links{display:none}
+  .brand{margin-right:8px}
+}

@@ -68,3 +68,33 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Contact form / backend (local dev)
+
+This project includes a small Express backend at `src/backend/server.js` used to send contact form submissions.
+
+Quick local steps:
+
+1. Copy `.env.example` to `.env` and edit values as needed.
+2. To test without sending real email (recommended):
+
+```bash
+MOCK_EMAIL=true npm run server
+```
+
+3. To run frontend in dev with the API URL set automatically:
+
+```bash
+npm run start:dev
+```
+
+4. To use real SMTP credentials, set `EMAIL_USER` and `EMAIL_PASS` in `.env` (use app-specific passwords) and run:
+
+```bash
+npm run server
+```
+
+Notes:
+- The backend reads configuration from `.env` (dotenv). Do not commit `.env` to source control.
+- A development proxy is configured so the frontend can POST to `/send` and it will be proxied to the backend on port 5000.
+
